@@ -1,0 +1,17 @@
+//Tells if a no is 4 digit or not
+package ifelse;
+
+import java.util.Scanner;
+
+public class fournumberdigit {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        if(n>999 && n<10000){
+            System.out.println("4 Digit No");
+        }
+        else{
+            System.out.println("Not a 4 digit number");
+        }
+    }
+}
