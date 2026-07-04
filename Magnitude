@@ -1,0 +1,14 @@
+//This code taks an input and check if its magnitude is less than 69
+package ifelse;
+
+import java.util.Scanner;
+
+public class magnitudelessthan64 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        float n =sc.nextInt();
+        if(n> -69 && n<69)
+            System.out.println("Magnitude of" +n+ "is Less than 69");
+        else System.out.println("Magnitude of" +n+ "id Greater than 69");
+    }
+}
