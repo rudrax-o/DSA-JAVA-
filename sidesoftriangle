@@ -1,0 +1,20 @@
+package ifelse;
+import java.util.Scanner;
+//Take 3 positive no and tell if they can be sides of a triangle
+//The sum of 2 sides should be greater than the 3rd side
+public class sidesoftriangle {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the 1st side");
+    int a = sc.nextInt();
+    System.out.println("Enter the 2nd side");
+    int b = sc.nextInt();
+    System.out.println("Enter the 3rd side");
+    int c = sc.nextInt();
+    if(a+b>c || b+c>a || c+a>b){
+        System.out.println("A triangle can be formed");
+    }
+    else{
+        System.out.println("Enter valid sides");
+    }
+}
