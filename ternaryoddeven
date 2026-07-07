@@ -1,0 +1,11 @@
+package ifelse;
+import java.util.Scanner;
+public class ternaryevenodd {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number");
+        int n=sc.nextInt();
+        //Condition ? : Sach : Jhoot
+        System.out.println("The number "+n+" is "+((n%2==0) ? " Even" : " Odd "));
+    }
+}
