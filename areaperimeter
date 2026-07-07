@@ -1,0 +1,19 @@
+package ifelse;
+import java.util.Scanner;
+public class areaperimeter {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the length of the rectangle");
+        int l=sc.nextInt();
+        System.out.println("enter the width of the rectangle");
+        int w=sc.nextInt();
+        System.out.println("The area of the rectangle is: " +l*w );
+        System.out.println("The perimeter of the rectangle is: " +2*(l*w));
+        if(l*w > 2*(l*w)){
+            System.out.println("The area of the rectangle is greater than its perimeter");
+        }
+        else{
+            System.out.println("The area of the rectangle is less than its perimeter");
+        }
+    }
+}
