@@ -1,0 +1,9 @@
+package Loops;
+//basics of for loop
+public class basics {
+    public static void main(String[] args){
+        for(int i=-7;i<12;i++){
+            System.out.println(i+" Rudra");
+        }
+    }
+}
