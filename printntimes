@@ -1,0 +1,14 @@
+package Loops;
+
+import java.util.Scanner;
+
+//print a persons name n times
+public class printntimes {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=1;i<=n;i++){
+            System.out.println("Rudra");
+        }
+    }
+}
