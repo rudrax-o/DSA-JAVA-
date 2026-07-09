@@ -1,0 +1,13 @@
+package Loops;
+//print a number from n to 1
+import java.util.Scanner;
+public class nto1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        float  n=sc.nextFloat();
+        for(float i=n;i>=1;i--){
+            System.out.println(i);
+        }
+    }
+}
