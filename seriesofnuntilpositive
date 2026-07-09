@@ -9,7 +9,7 @@ public class printaseriesutilpositive {
         int cd=sc.nextInt();
         //used i-cd below bcz i-- would decrement -1 only everytime,mera cd agar 5 he fir bhi 1 he hoga
         //so i-cd dalne se decrement har baar 5 ka he hoga
-        for(int i=n;i>1;i = i-cd){
+        for(int i=n;i>0;i = i-cd){
             System.out.println(i);
         }
     }
