@@ -16,14 +16,11 @@ public class SearchArrayElement {
     public static void Rudra(int[] arr, int target) {
         boolean found = false;
         for(int i = 0; i < arr.length; i++) {
-            // 3. Equality check (==) instead of modulus (%)
             if(arr[i] == target) {
                 found = true;
                 break;
             }
         }
-
-        // 4. Print ONCE outside the loop
         if(found) {
             System.out.println("The number " + target + " is present in the array.");
         } else {
