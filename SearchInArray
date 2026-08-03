@@ -1,5 +1,6 @@
+package Arrays;
 import java.util.Scanner;
-public class SearchArrayElement {
+public class SearchInArray{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter array size:");
@@ -12,6 +13,7 @@ public class SearchArrayElement {
         System.out.println("Enter number to search:");
         int target = sc.nextInt();
         sc.close();
+        Rudra(arr, target);
     }
     public static void Rudra(int[] arr, int target) {
         boolean found = false;
