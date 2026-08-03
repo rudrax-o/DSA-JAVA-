@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class SearchArrayElement {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter array size:");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        System.out.println("Enter " + n + " elements:");
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+        System.out.println("Enter number to search:");
+        int target = sc.nextInt();
+        sc.close();
+    }
+    public static void Rudra(int[] arr, int target) {
+        boolean found = false;
+        for(int i = 0; i < arr.length; i++) {
+            // 3. Equality check (==) instead of modulus (%)
+            if(arr[i] == target) {
+                found = true;
+                break; // Stop searching once found
+            }
+        }
+
+        // 4. Print ONCE outside the loop
+        if(found) {
+            System.out.println("The number " + target + " is present in the array.");
+        } else {
+            System.out.println("The number " + target + " is NOT present in the array.");
+        }
+    }
+}
