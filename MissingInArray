@@ -1,0 +1,21 @@
+package Arrays;
+//To find the missing number in an array
+import java.util.Arrays;
+import java.util.Scanner;
+public class MissingInArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long n = sc.nextLong();
+        long[] arr = new long[(int)n];
+        long length = arr.length;
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+        long sum = length*(length+1)/2;
+        long arrSum = 0;
+        for(long ele : arr){
+            arrSum+=ele;
+        }
+        System.out.println((int)(sum-arrSum));
+    }
+}
