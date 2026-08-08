@@ -1,0 +1,33 @@
+package Arrays;
+import java.util.Arrays;
+//To write a program to segrigate 0'1 and 1's
+//Ex: [0,1,0,1,0,0] to [0,0,0,0,1,1]
+import java.util.Scanner;
+public class Segrigate0sAnd1s {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        int l = arr.length;
+
+        for (int i = 0; i < l; i++) {
+            arr[i] = sc.nextInt();
+        }
+        seg(arr);
+    }
+    public static void seg(int[] arr){
+        int noOfZeros = 0;
+        for (int ele : arr) {
+            if (ele == 0) {
+                noOfZeros++;
+            }
+        }
+        for (int i = 0; i < noOfZeros; i++) {
+            arr[i] = 0;
+        }
+        for (int i = noOfZeros; i < arr.length; i++) {
+            arr[i] = 1;
+        }
+            System.out.println("Segregated Array: " + Arrays.toString(arr));
+        }
+    }
