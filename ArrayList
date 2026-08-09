@@ -1,0 +1,14 @@
+package Arrays;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
+public class ArrayListsInJavaBasic {
+    public static void main(String[] args) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(25);
+        arr.add(21);
+        arr.add(18);
+        arr.add(5);
+    }
+}
