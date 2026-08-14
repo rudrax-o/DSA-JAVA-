@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Array9 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        int l = arr.length;
+        for(int i = 0;i<l;i++){
+            arr[i] = sc.nextInt();
+        }
+        SecondLargest(arr, l);
+    }
+    public static void SecondLargest(int[] arr,int l){
+        int max = Integer.MIN_VALUE;
+        int Smax = Integer.MIN_VALUE;
+        for(int i=0;i<l;i++){
+            if(arr[i] > max){
+                max = arr[i];
+            }
+        }
+        for(int i=0;i<l;i++){
+            if(arr[i]>Smax && arr[i] != max){
+                Smax = arr[i];
+            }
+        }
+        if (Smax == Integer.MIN_VALUE) {
+            System.out.println("No second largest element");
+        } else {
+            System.out.println(Smax);
+    }
+    }
+}
