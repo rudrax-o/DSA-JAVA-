@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class MatrixAddition {
+    static void add(int[][] a, int r1, int c1, int[][] b, int r2, int c2) {
+        // Addition is only possible if dimensions match
+        if (r1 != r2 || c1 != c2) {
+            System.out.println("Wrong Input - Addition not possible (Dimensions must match)");
+            return;
+        }
+
+        int[][] sum = new int[r1][c1];
+
+        // Adding corresponding elements
+        for (int i = 0; i < r1; i++) {
+            for (int j = 0; j < c1; j++) {
+                sum[i][j] = a[i][j] + b[i][j];
+            }
+        }
+
+        // Printing the result matrix
+        System.out.println("Sum of matrices:");
+        for (int i = 0; i < r1; i++) {
+            for (int j = 0; j < c1; j++) {
+                System.out.print(sum[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        int[][] a = {
+            {1, 2, 3},
+            {4, 5, 6}
+        };
+
+        int[][] b = {
+            {7, 8, 9},
+            {1, 2, 3}
+        };
+
+        add(a, 2, 3, b, 2, 3);
+    }
+}
