@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class MatrixMultiplication {
+
+    static void multiply(int[][] a, int r1, int c1, int[][] b, int r2, int c2) {
+        // Step 1: Check condition for multiplication
+        if (c1 != r2) {
+            System.out.println("Multiplication not possible: Columns of A (" + c1 + 
+                               ") must match Rows of B (" + r2 + ").");
+            return;
+        }
+
+        int[][] mul = new int[r1][c2];
+
+        // Step 2: Perform multiplication using 3 nested loops
+        for (int i = 0; i < r1; i++) {
+            for (int j = 0; j < c2; j++) {
+                for (int k = 0; k < c1; k++) {
+                    mul[i][j] += a[i][k] * b[k][j];
+                }
+            }
+        }
+
+        System.out.println("Resultant Matrix (" + r1 + "x" + c2 + "):");
+        printMatrix(mul, r1, c2);
+    }
+
+    // Helper function to print a 2D matrix
+    static void printMatrix(int[][] matrix, int rows, int cols) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+
+        int[][] a = {
+            {1, 2, 3},
+            {4, 5, 6}
+        };
+
+        int[][] b = {
+            {7, 8},
+            {9, 1},
+            {2, 3}
+        };
+
+        System.out.println("Matrix A:");
+        printMatrix(a, 2, 3);
+
+        System.out.println("\nMatrix B:");
+        printMatrix(b, 3, 2);
+
+        System.out.println();
+        multiply(a, 2, 3, b, 3, 2);
+    }
+}
