@@ -1,0 +1,20 @@
+package Arrays;
+import ajva.util.Scanner;
+public class TransposeArray{
+static void Transpose(int[][] arr){
+}
+static void printMatrix(int[][] matrix){
+for(int i=0;i<matrix.length;i++){
+for(int j=0;j<matrix[i].length;j++){
+System.out.println(matrix[i][j]+" ");
+}
+System.out.println();
+}}
+static int[][] findTranspose(int[][] matrix,int r,int c){
+int[][] ans = new int[c][r];
+for(int i=0;i<c;i++){
+for(int j=0;j<r;j++){
+ans[i][j] = matrix[j][i];
+}}
+return ans;
+}
